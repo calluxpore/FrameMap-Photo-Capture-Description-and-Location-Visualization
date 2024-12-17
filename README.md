@@ -15,7 +15,11 @@ This project is perfect for developers experimenting with AR hardware, AI-powere
 
 ---
 
-<img src="image.png" alt="alt text" style="border-radius: 15px;">
+![alt text](image.png)
+
+---
+
+![alt text](image1.png)
 
 ---
 
