@@ -1,0 +1,16 @@
+[
+    {
+        "timestamp": "2024-12-17T17:21:22.147971",
+        "image_path": "captured_photo.jpg",
+        "latitude": 43.7064,
+        "longitude": -79.3986,
+        "caption": "The image is quite blurry, but it appears to show a room with various objects. There are shelves with what looks like equipment or personal items on them. In the foreground, there is a bright light source, possibly from a monitor or screen, which is causing a lot of glare and making the rest of the scene difficult to discern. The image has an artifact or digital error known as \"ringing,\" where there are horizontal lines across the picture, indicating interference with the signal or data."
+    },
+    {
+        "timestamp": "2024-12-17T17:23:00.622346",
+        "image_path": "captured_photo.jpg",
+        "latitude": 43.7064,
+        "longitude": -79.3986,
+        "caption": "The image shows a photograph taken through a viewfinder, possibly from a surveillance camera or similar device. It captures an indoor scene that includes what appears to be a projection or display screen with content on it, although the details of the content are not clear due to the resolution and angle of the photo. Below the screen, there's a portion of a room where you can see some furniture. The view is somewhat blurry, likely due to the camera shake or lens flare, which makes it difficult to discern any distinct features or objects in the foreground."
+    }
+]

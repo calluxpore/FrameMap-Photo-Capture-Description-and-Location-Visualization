@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Location Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; }
+        #map { height: 100%; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        // Initialize the map
+        const map = L.map('map').setView([20, 0], 2); // Default view
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Fetch photo metadata and add markers
+        fetch('photo_metadata.json')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(photo => {
+                    const { latitude, longitude, image_path, caption } = photo;
+
+                    if (latitude && longitude) {
+                        const marker = L.marker([latitude, longitude]).addTo(map);
+                        marker.bindPopup(`
+                            <b>Photo Captured Here</b><br>
+                            <img src="${image_path}" alt="Photo" style="width:100%;max-width:200px;"><br>
+                            <p><b>Caption:</b> ${caption}</p>
+                        `);
+                    }
+                });
+            })
+            .catch(error => console.error("Error loading metadata:", error));
+    </script>
+</body>
+</html>
