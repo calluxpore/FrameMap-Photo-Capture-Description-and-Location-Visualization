@@ -177,7 +177,7 @@ The frontend displays:
 
 ## Troubleshooting  
 
-- **Bluetooth Issues**: Ensure the Frame is connected and paired correctly.  
+- **Bluetooth Issues**: Ensure the Frame is connected and paired correctly. (this is automated)  
 - **LLaVA Not Running**: Confirm that Ollama is running using `ollama serve`.  
 - **Location Errors**: Ensure you have an active internet connection for IP-based geolocation.  
 - **Empty Map**: Verify that `photo_metadata.json` is populated after running the backend.  
@@ -196,3 +196,4 @@ This project is licensed under the MIT License.
 - **Ollama** for making local model deployment seamless.  
 - **Leaflet** for the OpenStreetMap integration.  
 - **Geopy** and **IPInfo.io** for location services.  
+- **OpenCage** for providing geolocation services.
